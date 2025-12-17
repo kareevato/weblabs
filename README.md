@@ -1,13 +1,51 @@
-1. Simple landing page
- 
-Description: Create a landing page following the given design (Figma).
-Requirements:
-● Use of semantic tags (<header>, <nav>, <ul>, <footer>, etc.) wherever is necessary
-● All fonts, colour palette, elements sizes must strictly match the design.
-● Pixel perfect is also not required, BUT your website should visually match the design template (i.e. If the element is horizontally centred on the design, it should look centred on the website)
-● All class names must not be meaningless (i.e. class=”myClass”) and should follow the same naming convention, preferably BEM, but you could come up with your own (just be consistent)
-● Basic cross-browser support (website should look correctly on last versions of modern browsers (Chrome, Safari, Edge)
-● For now, responsiveness is not required.
- 
-P.S If your semester project has a landing website that satisfies the requirements, then you could skip this work by bringing your website for an assessment.
-Note: The above goes only for those students. who were actually responsible for the website development. The whole team cannot use the right to skip this work!
+# 🌐 Data Warehouse - Landing Page
+
+Сучасна лендінг-сторінка для сервісу зберігання даних Data Warehouse. Проєкт реалізований з використанням чистого HTML та CSS з модульною архітектурою стилів.
+
+## 📋 Опис проєкту
+
+Data Warehouse - це лендінг-сторінка, яка презентує сервіс безпечного зберігання даних. Сайт містить інформацію про переваги сервісу, його функціонал та можливості для користувачів.
+
+## ✨ Основні секції
+
+- **Hero Section** - головна секція з призивом до дії та основним описом сервісу
+- **About Section** - інформація про високорівневий банк зберігання даних
+- **Features Section** - презентація ключових функцій:
+  - 🔍 Пошук даних
+  - 🕐 Доступ 24/7
+  - 🖨️ Друк даних
+  - 🔒 Безпека даних
+- **Footer** - футер з призивом до дії та контактною інформацією
+
+## 🛠️ Технології
+
+- **HTML5** - семантична розмітка
+- **CSS3** - стилізація з використанням:
+  - Flexbox
+  - CSS Grid
+  - Модульна архітектура CSS
+  - Кастомні шрифти (Avenir, Helvetica Neue)
+- **SVG** - векторна графіка для іконок та декоративних елементів
+
+## 📁 Структура проєкту
+
+```
+weblab1/
+├── css/
+│   ├── features.css      # Стилі для секції функцій
+│   ├── footer.css        # Стилі для футера
+│   ├── globals.css       # Глобальні стилі та утиліти
+│   ├── header.css        # Стилі для шапки сайту
+│   ├── hero.css          # Стилі для hero-секції
+│   ├── normalize.min.css # Нормалізація стилів
+│   ├── pink.css          # Стилі для секції "About"
+│   └── styles.css        # Головний файл імпортів стилів
+├── images/               # Графічні ресурси (SVG)
+│   ├── logo1.svg
+│   ├── button_header.svg
+│   ├── image1-6.svg
+│   └── ... (декоративні елементи)
+├── index (1).html        # Головна HTML-сторінка
+└── README.md             # Документація проєкту
+```
+
