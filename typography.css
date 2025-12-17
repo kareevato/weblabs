@@ -1,0 +1,53 @@
+/* Typography */
+.title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    color: var(--color-text-dark);
+}
+
+.paragraph {
+    width: 380px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--color-text-gray);
+}
+
+.features-paragraph {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--color-text-gray);
+}
+
+.features-paragraph-small {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-text-gray);
+}
+
+.features-title {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--color-text-dark);
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 88px;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-dark);
+}
+

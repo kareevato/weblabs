@@ -1,0 +1,99 @@
+/* Features Section */
+.features {
+    max-width: var(--container-max-width);
+    margin: 50px auto 50px;
+    padding: 0 20px;
+}
+
+.features-container {
+    max-width: 100%;
+}
+
+.features-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 584px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 70px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 30px;
+}
+
+.features-item1,
+.features-item2,
+.features-item3,
+.features-item4 {
+    min-height: 358px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: var(--transition-normal);
+    border-radius: 20px;
+}
+
+.features-item1:hover,
+.features-item2:hover,
+.features-item3:hover,
+.features-item4:hover {
+    transform: translateY(-5px);
+}
+
+.features-item1 {
+    background: url("../images/elipse1.svg") no-repeat right 115px top 63px,
+        url("../images/vect3_1.svg") no-repeat right 25px top 25px,
+        url("../images/rect3_1.svg") no-repeat right top;
+    background-size: auto;
+}
+
+.features-item2 {
+    background: url("../images/elipse2.svg") no-repeat right 35px bottom 63px,
+        url("../images/rect3_2.svg") no-repeat right top;
+    background-size: auto;
+}
+
+.features-item3 {
+    background: url("../images/elipse3.svg") no-repeat right 30px top 33px,
+        url("../images/rect3_3.svg") no-repeat right top;
+    background-size: auto;
+}
+
+.features-item4 {
+    background: url("../images/elipse4.svg") no-repeat right 115px top 33px,
+        url("../images/elipse3.svg") no-repeat right 25px bottom 2px,
+        url("../images/rect3_1.svg") no-repeat right top;
+    background-size: auto;
+}
+
+.features-item1 img,
+.features-item2 img,
+.features-item3 img,
+.features-item4 img {
+    flex-shrink: 0;
+    transition: var(--transition-normal);
+}
+
+.features-item1:hover img,
+.features-item2:hover img,
+.features-item3:hover img,
+.features-item4:hover img {
+    transform: scale(1.1);
+}
+
+.features-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    margin-left: 40px;
+}
+

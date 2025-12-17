@@ -1,0 +1,39 @@
+/* Desktop Styles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero__inner {
+        width: 550px;
+    }
+    
+    .hero__image img {
+        max-width: 500px;
+    }
+    
+    .hero-title {
+        font-size: 64px;
+        line-height: 72px;
+    }
+    
+    .pink-container {
+        padding: 40px;
+    }
+    
+    .pink-container img {
+        max-width: 350px;
+    }
+    
+    .features-grid {
+        column-gap: 40px;
+    }
+    
+    .features-item1,
+    .features-item2,
+    .features-item3,
+    .features-item4 {
+        min-height: 320px;
+    }
+}
+

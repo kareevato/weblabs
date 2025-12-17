@@ -1,0 +1,105 @@
+/* Button Components */
+.button__request-demo {
+    width: 210px;
+    height: 60px;
+    background: var(--color-white);
+    border-color: var(--color-white);
+    box-shadow: 0px 5px 5px var(--color-shadow);
+    border-radius: var(--radius-button);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+    color: var(--color-text-dark);
+    transition: var(--transition-normal);
+}
+
+.button__request-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 15px var(--color-shadow);
+}
+
+.button__request-demo:active {
+    transform: translateY(0);
+}
+
+.button__learn-more1,
+.button__learn-more2 {
+    width: 170px;
+    height: 60px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-button);
+    color: var(--color-white);
+    border-color: var(--color-white);
+    font-weight: 800;
+    font-size: 16px;
+    transition: var(--transition-normal);
+}
+
+.button__learn-more1:hover,
+.button__learn-more2:hover {
+    background-color: #8B5AD0;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(156, 105, 226, 0.3);
+}
+
+.button__learn-more2 {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 160%;
+    background-color: var(--color-pink);
+}
+
+.button__learn-more2:hover {
+    background-color: #E089B8;
+}
+
+.button__request-demo2 {
+    width: 210px;
+    height: 60px;
+    background: var(--color-white);
+    border-color: var(--color-white);
+    box-shadow: 0px 5px 5px var(--color-shadow);
+    border-radius: var(--radius-button);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+    color: var(--color-text-dark);
+    transition: var(--transition-normal);
+}
+
+.button__request-demo2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 15px var(--color-shadow);
+}
+
+.features-btn {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 160%;
+    display: flex;
+    justify-content: space-between;
+    width: 125px;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: var(--color-text-dark);
+    background: transparent;
+    transition: var(--transition-normal);
+}
+
+.features-btn:hover {
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+
+.features-btn img {
+    transition: var(--transition-normal);
+}
+
+.features-btn:hover img {
+    transform: translateX(3px);
+}
+

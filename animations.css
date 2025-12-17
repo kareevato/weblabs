@@ -1,0 +1,402 @@
+/* Animations */
+
+/* Animation 1: Fade In on Scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero__inner {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero__image {
+    animation: fadeInRight 1.2s ease-out 0.3s both;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pink-container {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.features-header {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.features-item1 {
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.features-item2 {
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.features-item3 {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.features-item4 {
+    animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+/* Animation 2: Pulse for Logo */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.header__nav-logo img {
+    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.header__nav-logo img:hover {
+    animation: none;
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Animation 3: Slide In from Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.features-btn {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* Animation 4: Bounce for Buttons */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes buttonScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.button__learn-more1:hover,
+.button__learn-more2:hover {
+    animation: buttonScale 0.4s ease;
+    box-shadow: 0 8px 20px rgba(156, 105, 226, 0.4);
+    transform: scale(1.05);
+}
+
+.button__request-demo:hover,
+.button__request-demo2:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation 5: Rotate and Scale for Images */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.features-item1:hover,
+.features-item2:hover,
+.features-item3:hover,
+.features-item4:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.features-item1:hover img,
+.features-item2:hover img,
+.features-item3:hover img,
+.features-item4:hover img {
+    animation: rotate 0.6s ease;
+    transform: rotate(360deg) scale(1.15);
+}
+
+.features-item1,
+.features-item2,
+.features-item3,
+.features-item4 {
+    transition: all 0.3s ease;
+}
+
+/* Smooth transitions for interactive elements */
+.header__nav-item,
+.button__request-demo,
+.button__learn-more1,
+.button__learn-more2,
+.button__request-demo2,
+.features-btn {
+    transition: all 0.3s ease;
+}
+
+/* Animation 6: Nav items hover effect */
+@keyframes navItemSlide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(5px);
+    }
+}
+
+.header__nav-item a:hover {
+    color: #9c69e2;
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+/* Animation 7: Hamburger menu animation */
+@keyframes hamburgerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.hamburger.active {
+    animation: hamburgerRotate 0.3s ease forwards;
+}
+
+.hamburger span {
+    transition: all 0.3s ease;
+}
+
+/* Animation 8: Hero image float */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+}
+
+.hero__image img {
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero__image img:hover {
+    animation: float 1s ease-in-out infinite;
+    transform: scale(1.05);
+}
+
+/* Animation 9: Features button hover */
+.features-btn:hover {
+    transform: translateX(10px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(156, 105, 226, 0.3);
+}
+
+/* Scroll reveal animation */
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: reveal 0.8s ease-out forwards;
+}
+
+/* Animation 10: Header scroll effect */
+.header {
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+/* Animation 11: Footer message icon */
+@keyframes messageBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+.footer-end img {
+    animation: messageBounce 2s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-end img:hover {
+    animation: messageBounce 0.5s ease-in-out infinite;
+    transform: scale(1.2);
+}
+
+/* Animation 12: Pink section image */
+.pink-container img {
+    transition: transform 0.5s ease;
+}
+
+.pink-container:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Animation 13: Text typing effect (optional) */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation 14: Shimmer effect for buttons */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.button__learn-more1,
+.button__learn-more2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.button__learn-more1::before,
+.button__learn-more2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.button__learn-more1:hover::before,
+.button__learn-more2:hover::before {
+    left: 100%;
+}
+
+/* Animation 15: Loading dots (if needed) */
+@keyframes loadingDots {
+    0%, 20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60%, 100% {
+        content: '...';
+    }
+}
+
+/* Animation 16: Footer line animation */
+@keyframes lineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.footer-line {
+    animation: lineExpand 1s ease-out;
+}
+
+/* Animation 17: Footer container fade in */
+.footer-container {
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.footer-end {
+    animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+/* Animation 18: Smooth scale on page elements */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pink-container {
+    animation: scaleIn 0.8s ease-out 0.2s both, fadeInUp 1s ease-out 0.2s both;
+}
+

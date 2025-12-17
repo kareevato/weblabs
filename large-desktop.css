@@ -1,0 +1,60 @@
+/* Large Desktop Styles (1025px - 2560px) */
+@media (min-width: 1025px) and (max-width: 2560px) {
+    .container {
+        max-width: var(--container-max-width);
+    }
+    
+    /* Center content for extra-large screens */
+    @media (min-width: 1920px) {
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero,
+        .pink,
+        .features,
+        .footer {
+            width: 100%;
+            max-width: var(--container-max-width);
+        }
+    }
+}
+
+/* 4K Screens (2561px+) */
+@media (min-width: 2561px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f5f5f5;
+    }
+    
+    .hero,
+    .pink,
+    .features,
+    .footer {
+        width: 100%;
+        max-width: var(--container-max-width);
+        background: var(--color-white);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .hero {
+        border-radius: 0;
+    }
+    
+    .pink {
+        border-radius: 0;
+    }
+    
+    .features {
+        border-radius: 0;
+    }
+    
+    .footer {
+        border-radius: 0;
+    }
+}
+

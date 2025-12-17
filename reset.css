@@ -1,0 +1,48 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    transition: var(--transition-normal);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    padding: 0 20px;
+    width: 100%;
+}
+
