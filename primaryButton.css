@@ -1,0 +1,40 @@
+.primary-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn.primary {
+  background: #4A90E2;
+  color: #fff;
+}
+
+.primary-btn.primary:hover {
+  background: #1A3B8A;
+}
+
+.primary-btn.secondary {
+  background: #fff;
+  color: #1A3B8A;
+  border: 2px solid #1A3B8A;
+}
+
+.primary-btn.secondary:hover {
+  background: #1A3B8A;
+  color: #fff;
+}
+
+.primary-btn.dark {
+  background: #1A3B8A;
+  color: #fff;
+}
+
+.primary-btn.dark:hover {
+  background: #0d2655;
+}
+
+
