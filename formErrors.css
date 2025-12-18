@@ -1,0 +1,29 @@
+.form-errors {
+  background-color: #fee;
+  border: 2px solid #fcc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.form-errors h3 {
+  color: #c33;
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.form-errors ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.form-errors li {
+  color: #c33;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-errors li:last-child {
+  margin-bottom: 0;
+}
+

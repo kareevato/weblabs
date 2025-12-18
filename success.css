@@ -1,0 +1,32 @@
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 48px 24px;
+}
+
+.success-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.success-icon {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.success-content h1 {
+  font-size: 36px;
+  color: #28a745;
+  margin: 0 0 16px 0;
+}
+
+.success-message {
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+}
+
