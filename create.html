@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаба 4: Створити фільм</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>➕ Додати новий фільм</h1>
+    
+    <form id="createForm" class="form">
+      <div class="form-group">
+        <label for="name">Назва фільму *</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          minlength="2" 
+          maxlength="100"
+          placeholder="Введіть назву фільму">
+      </div>
+
+      <div class="form-group">
+        <label for="genre">Жанр *</label>
+        <input 
+          type="text" 
+          id="genre" 
+          name="genre" 
+          required 
+          minlength="2" 
+          maxlength="50"
+          placeholder="Введіть жанр">
+      </div>
+
+      <div class="form-group">
+        <label for="duration">Тривалість (хвилини) *</label>
+        <input 
+          type="number" 
+          id="duration" 
+          name="duration" 
+          required 
+          min="1" 
+          max="600"
+          placeholder="Введіть тривалість">
+      </div>
+
+      <div class="form-group">
+        <label for="year">Рік випуску *</label>
+        <input 
+          type="number" 
+          id="year" 
+          name="year" 
+          required 
+          min="1888" 
+          max="2025"
+          placeholder="Введіть рік">
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Рейтинг (0-10) *</label>
+        <input 
+          type="number" 
+          id="rating" 
+          name="rating" 
+          required 
+          min="0" 
+          max="10" 
+          step="0.1"
+          placeholder="Введіть рейтинг">
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Створити</button>
+        <a href="index.html" class="btn btn-secondary">Назад</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Модальне вікно для помилок -->
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>❌ Помилка валідації</h2>
+      <p id="errorMessage"></p>
+      <button class="btn btn-primary" onclick="closeModal()">Зрозуміло</button>
+    </div>
+  </div>
+
+  <script src="create.js"></script>
+</body>
+</html>
+
