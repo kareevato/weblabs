@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Каталог фільмів</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">🎬 Каталог фільмів</h1>
+
+    <div class="toolbar">
+      <input id="searchInput" class="input" placeholder="Пошук за назвою..." />
+
+      <div class="toolbar-right">
+        <a class="btn" href="create.html">Додати фільм</a>
+
+        <label for="sortField" class="visually-hidden">Поле для сортування</label>
+        <select id="sortField" class="input" title="Поле для сортування">
+          <option value="">Сортування...</option>
+          <option value="views">За переглядами</option>
+          <option value="duration">За тривалістю</option>
+          <option value="rating">За рейтингом</option>
+          <option value="year">За роком</option>
+        </select>
+
+        <label for="sortOrder" class="visually-hidden">Порядок сортування</label>
+        <select id="sortOrder" class="input" title="Порядок сортування">
+          <option value="desc">Зменшення</option>
+          <option value="asc">Збільшення</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Загальна тривалість</h3>
+        <p id="totalDuration">0</p>
+        <span>хвилин</span>
+      </div>
+      <div class="stat-card">
+        <h3>Середній рейтинг</h3>
+        <p id="avgRating">0</p>
+        <span>з 10</span>
+      </div>
+      <div class="stat-card">
+        <h3>Кількість фільмів</h3>
+        <p id="totalFilms">0</p>
+        <span>штук</span>
+      </div>
+      <div class="stat-card">
+        <h3>Загальні перегляди</h3>
+        <p id="totalViews">0</p>
+        <span>переглядів</span>
+      </div>
+    </div>
+
+    <div id="cards" class="cards-grid"></div>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

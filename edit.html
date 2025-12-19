@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Редагувати фільм</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Редагувати фільм</h1>
+    <div class="toolbar">
+      <button id="backBtn" class="btn" type="button">⬅️ Назад</button>
+    </div>
+    <form id="form" class="form">
+      <input id="name" placeholder="Назва" required />
+      <input id="genre" placeholder="Жанр" required />
+      <input id="duration" type="number" placeholder="Тривалість (хв)" required />
+      <input id="year" type="number" placeholder="Рік" required />
+      <input id="rating" type="number" step="0.1" placeholder="Рейтинг" required />
+      <button class="btn">Зберегти</button>
+    </form>
+  </main>
+  <script>
+    const API = 'http://localhost:3000';
+    const id = new URLSearchParams(window.location.search).get('id');
+    document.getElementById('backBtn').addEventListener('click', () => {
+      history.length > 1 ? history.back() : window.location.href = 'index.html';
+    });
+
+    async function load() {
+      const r = await fetch(`${API}/films/${id}`);
+      const f = await r.json();
+      name.value = f.name;
+      genre.value = f.genre;
+      duration.value = f.duration;
+      year.value = f.year;
+      rating.value = f.rating;
+    }
+
+    document.getElementById('form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const body = {
+        name: name.value,
+        genre: genre.value,
+        duration: +duration.value,
+        year: +year.value,
+        rating: +rating.value
+      };
+      const r = await fetch(`${API}/films/${id}`, {
+        method: 'PUT',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+      });
+      if (r.ok) window.location.href = 'index.html';
+      else alert('Помилка при оновленні');
+    });
+
+    load();
+  </script>
+</body>
+</html>

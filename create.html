@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Додати фільм</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Додати новий фільм</h1>
+    <div class="toolbar">
+      <button id="backBtn" class="btn" type="button">⬅️ Назад</button>
+    </div>
+
+    <form id="form" class="form">
+      <label>Назва фільму</label>
+      <input id="name" type="text" placeholder="Назва" required />
+
+      <label>Жанр</label>
+      <input id="genre" type="text" placeholder="Жанр" required />
+
+      <label>Тривалість (хв)</label>
+      <input id="duration" type="number" min="1" placeholder="148" required />
+
+      <label>Рік</label>
+      <input id="year" type="number" min="1900" max="2100" placeholder="2010" required />
+
+      <label>Рейтинг</label>
+      <input id="rating" type="number" step="0.1" min="0" max="10" placeholder="8.8" required />
+
+      <button class="btn" type="submit">Створити</button>
+    </form>
+  </main>
+
+  <script>
+    const API = 'http://localhost:3000';
+    
+    document.getElementById('backBtn').addEventListener('click', () => {
+      history.length > 1 ? history.back() : window.location.href = 'index.html';
+    });
+
+    document.getElementById('form').addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const genre = document.getElementById('genre').value.trim();
+      const duration = parseInt(document.getElementById('duration').value);
+      const year = parseInt(document.getElementById('year').value);
+      const rating = parseFloat(document.getElementById('rating').value);
+
+      if (!name || !genre || !duration || !year || !rating) {
+        alert('⚠️ Усі поля обовʼязкові до заповнення!');
+        return;
+      }
+
+      const body = { name, genre, duration, year, rating };
+
+      const res = await fetch(`${API}/films`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+
+      if (res.ok) {
+        alert('✅ Фільм успішно створено!');
+        window.location.href = 'index.html';
+      } else {
+        alert('❌ Помилка при створенні фільму');
+      }
+    });
+  </script>
+</body>
+</html>
